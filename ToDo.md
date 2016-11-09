@@ -1,0 +1,3 @@
+
+This is still to review ... 
+http://guides.codepath.com/android/Constructing-View-Layouts
