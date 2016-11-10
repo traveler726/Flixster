@@ -28,6 +28,8 @@ public class MovieActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie);
+        getSupportActionBar().show();  // can show() or hide();
+
         lvItems = (ListView) findViewById(R.id.lvMovies);
         movies = new ArrayList<>();
         movieAdapter = new MovieArrayAdapter(this, movies);

@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class Movie {
 
+    private static String EMPTY_OVERVIEW = "N/A";
     String posterPath;
     String originalTitle;
     String overview;
@@ -31,6 +32,9 @@ public class Movie {
     }
 
     public String getOverview() {
+        if (overview == null || overview.isEmpty()) {
+            return EMPTY_OVERVIEW;
+        }
         return overview;
     }
 

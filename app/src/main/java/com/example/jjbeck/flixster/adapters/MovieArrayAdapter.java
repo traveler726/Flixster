@@ -8,9 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jjbeck.flixster.R;
 import com.example.jjbeck.flixster.models.Movie;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -26,6 +28,8 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        String toastMsg = null;
+
         // Get the data for the movie at 'position' (remember index)
         Movie movie = getItem(position);
 
@@ -34,7 +38,14 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.item_movie, parent, false);
+
+            // Toast the name to display temporarily on screen
+            // I like this for debugging.  Pretty neat.
+            toastMsg = "getView("+position+") inflated new view.";
+        } else {
+            toastMsg = "getView("+position+") recycling old view.";
         }
+        Toast.makeText(getContext(), toastMsg, Toast.LENGTH_SHORT).show();
 
         // find the image view
         ImageView lvImage = (ImageView) convertView.findViewById(R.id.idMovieImage);
@@ -44,11 +55,15 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
 
         // Setup the new data now.
         // TODO: fix the naming of the overviewEditText to more standard like tvOverview!
-        TextView tvTitle    = (TextView)convertView.findViewById(R.id.tvTitle);
-        TextView tvOverview = (TextView) convertView.findViewById(R.id.overviewEditText);
+        TextView tvTitle    = (TextView) convertView.findViewById(R.id.tvTitle);
+        TextView tvOverview = (TextView) convertView.findViewById(R.id.tvOverview);
 
         tvTitle.setText(movie.getOriginalTitle());
         tvOverview.setText(movie.getOverview());
+
+        // Use the Picasso library to get the URL and load the
+        // image into the Layouts ImageView.
+        Picasso.with(getContext()).load(movie.getPosterPath()).into(lvImage);
 
         return convertView;
     }
