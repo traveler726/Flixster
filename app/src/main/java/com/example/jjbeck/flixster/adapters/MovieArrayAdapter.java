@@ -2,6 +2,7 @@ package com.example.jjbeck.flixster.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +59,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         TextView tvTitle    = (TextView) convertView.findViewById(R.id.tvTitle);
         TextView tvOverview = (TextView) convertView.findViewById(R.id.tvOverview);
 
-        tvTitle.setText(movie.getOriginalTitle());
+        tvTitle.setText(Html.fromHtml("<i>"+movie.getTitle()+"</i>"));
         tvOverview.setText(movie.getOverview());
 
         // Use the Picasso library to get the URL and load the

@@ -12,24 +12,34 @@ import java.util.ArrayList;
 
 public class Movie {
 
-    private static String EMPTY_OVERVIEW = "N/A";
+    private static String EMPTY_OVERVIEW    = "N/A";
+    private static String IMAGE_URL         = "https://image.tmdb.org/t/p/";
+    private static String IMAGE_POSTER_SIZE = "w342";
     String posterPath;
     String originalTitle;
+    String title;
     String overview;
+    String movieId;
 
     public Movie(JSONObject jsonObject) throws JSONException {
         posterPath    = jsonObject.getString("poster_path");
+        title         = jsonObject.getString("title");
         originalTitle = jsonObject.getString("original_title");
         overview      = jsonObject.getString("overview");
+        movieId       = jsonObject.getString("id");
     }
 
     public String getPosterPath() {
-        return String.format("https://image.tmdb.org/t/p/w342/%s", posterPath);
+        return String.format("%s/%s/%s", IMAGE_URL, IMAGE_POSTER_SIZE, posterPath);
     }
 
     public String getOriginalTitle() {
         return originalTitle;
     }
+
+    public String getTitle() { return title; }
+
+    public String getMovieId() { return movieId; }
 
     public String getOverview() {
         if (overview == null || overview.isEmpty()) {
