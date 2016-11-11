@@ -29,7 +29,7 @@ Optional enhancements:
  * [ ] Stretch: Leverage the data binding support module to bind data into one or more activity layout templates.
  * [ ] Stretch: Switch to using retrolambda expressions to cleanup event handling blocks. (1 point)
  * [ ] Stretch: Apply the popular ButterKnife annotation library to reduce view boilerplate. (1 point)
- * [ ] Stretch: Add a rounded corners for the images using the Picasso transformations. (1 point)
+ * [x] Stretch: Add a rounded corners for the images using the Picasso transformations. (1 point)
  * [ ] Stretch: Replace android-async-http network client with the popular OkHttp networking library for all TheMovieDB API calls. (1 points)
  * [ ] Stretch: Replace all icon drawables and other static image assets with vector drawables where appropriate. (1 points)
 
