@@ -1,0 +1,400 @@
+{
+    "dates": {
+        "maximum": "2016-11-18", 
+        "minimum": "2016-10-07"
+    }, 
+    "page": 1, 
+    "results": [
+        {
+            "adult": false, 
+            "backdrop_path": "/tFI8VLMgSTTU38i8TIsklfqS9Nl.jpg", 
+            "genre_ids": [
+                28, 
+                12, 
+                14, 
+                878
+            ], 
+            "id": 284052, 
+            "original_language": "en", 
+            "original_title": "Doctor Strange", 
+            "overview": "After his career is destroyed, a brilliant but arrogant surgeon gets a new lease on life when a sorcerer takes him under his wing and trains him to defend the world against evil.", 
+            "popularity": 52.834047, 
+            "poster_path": "/xfWac8MTYDxujaxgPVcRD9yZaul.jpg", 
+            "release_date": "2016-10-25", 
+            "title": "Doctor Strange", 
+            "video": false, 
+            "vote_average": 6.97, 
+            "vote_count": 688
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/4ynQYtSEuU5hyipcGkfD6ncwtwz.jpg", 
+            "genre_ids": [
+                53, 
+                28, 
+                80, 
+                18, 
+                9648
+            ], 
+            "id": 343611, 
+            "original_language": "en", 
+            "original_title": "Jack Reacher: Never Go Back", 
+            "overview": "Jack Reacher must uncover the truth behind a major government conspiracy in order to clear his name. On the run as a fugitive from the law, Reacher uncovers a potential secret from his past that could change his life forever.", 
+            "popularity": 22.605947, 
+            "poster_path": "/IfB9hy4JH1eH6HEfIgIGORXi5h.jpg", 
+            "release_date": "2016-10-19", 
+            "title": "Jack Reacher: Never Go Back", 
+            "video": false, 
+            "vote_average": 4.46, 
+            "vote_count": 448
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/anmLLbDx9d98NMZRyVUtxwJR6ab.jpg", 
+            "genre_ids": [
+                28, 
+                80, 
+                9648, 
+                878, 
+                53
+            ], 
+            "id": 207932, 
+            "original_language": "en", 
+            "original_title": "Inferno", 
+            "overview": "After waking up in a hospital with amnesia, professor Robert Langdon and a doctor must race against time to foil a deadly global plot.", 
+            "popularity": 14.673429, 
+            "poster_path": "/oFOG2yIRcluKfTtYbzz71Vj9bgz.jpg", 
+            "release_date": "2016-10-13", 
+            "title": "Inferno", 
+            "video": false, 
+            "vote_average": 5.13, 
+            "vote_count": 397
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/zBK4QZONMQXhcgaJv1YYTdCW7q9.jpg", 
+            "genre_ids": [
+                18, 
+                36, 
+                10752
+            ], 
+            "id": 324786, 
+            "original_language": "en", 
+            "original_title": "Hacksaw Ridge", 
+            "overview": "WWII American Army Medic Desmond T. Doss, who served during the Battle of Okinawa, refuses to kill people and becomes the first Conscientious Objector in American history to win the Congressional Medal of Honor.", 
+            "popularity": 10.838797, 
+            "poster_path": "/bndiUFfJxNd2fYx8XO610L9a07m.jpg", 
+            "release_date": "2016-11-04", 
+            "title": "Hacksaw Ridge", 
+            "video": false, 
+            "vote_average": 5.7, 
+            "vote_count": 58
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/z3dFr6KAJt07hxWZ7g8h7i4Dp50.jpg", 
+            "genre_ids": [
+                18, 
+                878
+            ], 
+            "id": 329865, 
+            "original_language": "en", 
+            "original_title": "Arrival", 
+            "overview": "Taking place after alien crafts land around the world, an expert linguist is recruited by the military to determine whether they come in peace or are a threat.", 
+            "popularity": 10.73115, 
+            "poster_path": "/4Iu5f2nv7huqvuYkmZvSPOtbFjs.jpg", 
+            "release_date": "2016-11-10", 
+            "title": "Arrival", 
+            "video": false, 
+            "vote_average": 6.05, 
+            "vote_count": 42
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/i9flZtw3BwukADQpu5PlrkwPYSY.jpg", 
+            "genre_ids": [
+                80, 
+                53, 
+                18
+            ], 
+            "id": 302946, 
+            "original_language": "en", 
+            "original_title": "The Accountant", 
+            "overview": "As a math savant uncooks the books for a new client, the Treasury Department closes in on his activities and the body count starts to rise.", 
+            "popularity": 8.128952, 
+            "poster_path": "/l9BWPqUV57X5ELBDLlbO7Vhh3Mr.jpg", 
+            "release_date": "2016-10-14", 
+            "title": "The Accountant", 
+            "video": false, 
+            "vote_average": 5.97, 
+            "vote_count": 220
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/qWNFwjDJOMDOnx5JRQSA6xqiTQP.jpg", 
+            "genre_ids": [
+                27, 
+                53
+            ], 
+            "id": 335796, 
+            "original_language": "en", 
+            "original_title": "Ouija: Origin of Evil", 
+            "overview": "In 1965 Los Angeles, a widowed mother and her two daughters add a new stunt to bolster their séance scam business and unwittingly invite authentic evil into their home. When the youngest daughter is overtaken by the merciless spirit, this small family confronts unthinkable fears to save her and send her possessor back to the other side.", 
+            "popularity": 6.835474, 
+            "poster_path": "/8bDJt4f1ooDY3vNWVoVjw8PvsGH.jpg", 
+            "release_date": "2016-10-20", 
+            "title": "Ouija: Origin of Evil", 
+            "video": false, 
+            "vote_average": 5.23, 
+            "vote_count": 66
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/ixKzD8p95NIe8trdqrDu9OaJJWO.jpg", 
+            "genre_ids": [
+                12, 
+                10751, 
+                14
+            ], 
+            "id": 259316, 
+            "original_language": "en", 
+            "original_title": "Fantastic Beasts and Where to Find Them", 
+            "overview": "In 1926, Newt Scamander arrives at the Magical Congress of the United States of America with a magically expanded briefcase, which houses a number of dangerous creatures and their habitats. When the creatures escape from the briefcase, it sends the American wizarding authorities after Newt, and threatens to strain even further the state of magical and non-magical relations.", 
+            "popularity": 6.154149, 
+            "poster_path": "/9HE9xiNMEFJnCzndlkWD7oPfAOx.jpg", 
+            "release_date": "2016-11-16", 
+            "title": "Fantastic Beasts and Where to Find Them", 
+            "video": false, 
+            "vote_average": 3.3, 
+            "vote_count": 29
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/ni0yg73zY0bCl0jm6T0gNr64i8Q.jpg", 
+            "genre_ids": [
+                18, 
+                53
+            ], 
+            "id": 340666, 
+            "original_language": "en", 
+            "original_title": "Nocturnal Animals", 
+            "overview": "A woman named Susan receives a book manuscript from her ex-husband — a man she left 20 years earlier — asking for her opinion of his writing. As she reads, she is drawn into the fictional life of Tony Hastings, a math professor whose family vacation turns violent.", 
+            "popularity": 5.822239, 
+            "poster_path": "/9Moizj8qxcZK6DqEE1MTO3pQAEw.jpg", 
+            "release_date": "2016-11-10", 
+            "title": "Nocturnal Animals", 
+            "video": false, 
+            "vote_average": 7.2, 
+            "vote_count": 22
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/wc1JxADaBLuWhySkaawCBTpixCo.jpg", 
+            "genre_ids": [
+                10751, 
+                16, 
+                12
+            ], 
+            "id": 136799, 
+            "original_language": "en", 
+            "original_title": "Trolls", 
+            "overview": "Lovable and friendly, the trolls love to play around. But one day, a mysterious giant shows up to end the party. Poppy, the optimistic leader of the Trolls, and her polar opposite, Branch, must embark on an adventure that takes them far beyond the only world they’ve ever known.", 
+            "popularity": 5.298063, 
+            "poster_path": "/yAdwXn2SsbJvkP42ZVEGoayJ0nW.jpg", 
+            "release_date": "2016-10-13", 
+            "title": "Trolls", 
+            "video": false, 
+            "vote_average": 5.85, 
+            "vote_count": 59
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/moR1aLgZsiJiKfGXkGZAz22U45b.jpg", 
+            "genre_ids": [
+                18, 
+                53
+            ], 
+            "id": 329981, 
+            "original_language": "en", 
+            "original_title": "Shut In", 
+            "overview": "A heart-pounding thriller about a widowed child psychologist who lives in an isolated existence in rural New England. Caught in a deadly winter storm, she must find a way to rescue a young boy before he disappears forever.", 
+            "popularity": 4.998516, 
+            "poster_path": "/xg2hnFYPdfd1PjLtX3fNr1DWdAU.jpg", 
+            "release_date": "2016-11-11", 
+            "title": "Shut In", 
+            "video": false, 
+            "vote_average": 3, 
+            "vote_count": 14
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/A0WHgxZS1MqN6i3Nd9K4RDFNMJe.jpg", 
+            "genre_ids": [
+                18, 
+                36, 
+                10752
+            ], 
+            "id": 293767, 
+            "original_language": "en", 
+            "original_title": "Billy Lynn's Long Halftime Walk", 
+            "overview": "19-year-old Billy Lynn is brought home for a victory tour after a harrowing Iraq battle. Through flashbacks the film shows what really happened to his squad - contrasting the realities of war with America's perceptions.", 
+            "popularity": 4.76986, 
+            "poster_path": "/oGxw0NSwtO8e2NHh4pDbI7dWWLj.jpg", 
+            "release_date": "2016-11-11", 
+            "title": "Billy Lynn's Long Halftime Walk", 
+            "video": false, 
+            "vote_average": 5.5, 
+            "vote_count": 5
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/ipWoCersdNWHm9jo3sQa3Xgu2yg.jpg", 
+            "genre_ids": [
+                18
+            ], 
+            "id": 374461, 
+            "original_language": "en", 
+            "original_title": "Mr. Church", 
+            "overview": "A unique friendship develops when a little girl and her dying mother inherit a cook - Mr. Church. What begins as an arrangement that should only last six months, instead spans fifteen years.", 
+            "popularity": 4.561821, 
+            "poster_path": "/6qewDsh3LudwGRtGtoHgFJ2woxL.jpg", 
+            "release_date": "2016-10-25", 
+            "title": "Mr. Church", 
+            "video": false, 
+            "vote_average": 6.58, 
+            "vote_count": 25
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/5sdqc8wYc56J4VvakpBRByegU9j.jpg", 
+            "genre_ids": [
+                12, 
+                18, 
+                14, 
+                10749, 
+                53
+            ], 
+            "id": 283378, 
+            "original_language": "en", 
+            "original_title": "Fallen", 
+            "overview": "Lucinda Price is sent to a reform academy under the assumption that she has killed a boy. There, she meets two mysterious boys, Cam and Daniel, to whom she feels drawn to both. But as the love triangle unfurls, it is Daniel that Luce cannot keep herself away from, and things begin to take a darker turn when she finds out his true identity.", 
+            "popularity": 4.302893, 
+            "poster_path": "/e0mUncksrRaWpdBcxt0VExmAIgh.jpg", 
+            "release_date": "2016-11-10", 
+            "title": "Fallen", 
+            "video": false, 
+            "vote_average": 0, 
+            "vote_count": 0
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/h5dUnifbLZZ7au4A8CIphZwFcpk.jpg", 
+            "genre_ids": [
+                35
+            ], 
+            "id": 421681, 
+            "original_language": "en", 
+            "original_title": "Cassandra", 
+            "overview": "Linda and Mark lived in the house of their dreams but problems develop. One is a previous tenant, Cassandra, who died there 100 years ago and now is back.", 
+            "popularity": 4.092829, 
+            "poster_path": "/rrF9KUmt9ZhhVghMvHrVZHAbDcx.jpg", 
+            "release_date": "2016-11-11", 
+            "title": "Cassandra", 
+            "video": false, 
+            "vote_average": 10, 
+            "vote_count": 1
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/gu8JiPuGksIO26lHosHzTbAFQ2m.jpg", 
+            "genre_ids": [
+                99
+            ], 
+            "id": 410718, 
+            "original_language": "en", 
+            "original_title": "Before the Flood", 
+            "overview": "A look at how climate change affects our environment and what society can do prevent the demise of endangered species, ecosystems, and native communities across the planet.", 
+            "popularity": 4.033289, 
+            "poster_path": "/lOu2ETjnndhk89SgqK9lFb3Lb4i.jpg", 
+            "release_date": "2016-10-21", 
+            "title": "Before the Flood", 
+            "video": false, 
+            "vote_average": 7.91, 
+            "vote_count": 39
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": null, 
+            "genre_ids": [
+                18
+            ], 
+            "id": 390337, 
+            "original_language": "da", 
+            "original_title": "Forældre", 
+            "overview": "Kjeld and Vibeke, a middle-aged Danish couple, aren’t entirely certain who they are without their son. Esben has recently moved away from home; their identities unmoored in his absence. Attempting to recapture the vigor and magic of their younger days, they move out of their house and into the old, pre-parenthood apartment where they first fell in love. Recapturing their youth is changing them in strange and unexpected ways.", 
+            "popularity": 3.805232, 
+            "poster_path": "/3SN3rbwEMeFxbfRWBuHbZCHAmwe.jpg", 
+            "release_date": "2016-11-03", 
+            "title": "Parents", 
+            "video": false, 
+            "vote_average": 10, 
+            "vote_count": 1
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/91WPDonXsxRzi7AcfedKM3p3NFU.jpg", 
+            "genre_ids": [
+                27
+            ], 
+            "id": 14564, 
+            "original_language": "en", 
+            "original_title": "Rings", 
+            "overview": "The film revolves around the events that took place before The Ring. It tells the story of the years before the video tape came to be and the beginning of how Samara's terror began.", 
+            "popularity": 3.754942, 
+            "poster_path": "/ueu1Mo2XRZ2C2aBisP30e1d5SmA.jpg", 
+            "release_date": "2016-10-27", 
+            "title": "Rings", 
+            "video": false, 
+            "vote_average": 6.17, 
+            "vote_count": 40
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/1w8gvBaUQ2pdveBmgrJlvLUaDZF.jpg", 
+            "genre_ids": [
+                35
+            ], 
+            "id": 340402, 
+            "original_language": "en", 
+            "original_title": "Almost Christmas", 
+            "overview": "An dysfunctional family gathers together for their first Christmas since their mom died.", 
+            "popularity": 3.648195, 
+            "poster_path": "/7xln7jWqwOARcdxoZ1E3kYddlt.jpg", 
+            "release_date": "2016-11-11", 
+            "title": "Almost Christmas", 
+            "video": false, 
+            "vote_average": 2.17, 
+            "vote_count": 4
+        }, 
+        {
+            "adult": false, 
+            "backdrop_path": "/8pj9RwtdzDMGLms217EIJiUEZtZ.jpg", 
+            "genre_ids": [
+                27
+            ], 
+            "id": 340103, 
+            "original_language": "en", 
+            "original_title": "The Monster", 
+            "overview": "A mother and her 10-year old daughter are trapped in a forest. There is something in this forest. Something unlike anything they have heard before. Something the lurks in the darkness and it’s coming after them.", 
+            "popularity": 3.492272, 
+            "poster_path": "/9nUDh1SfUW9sahDclZmYrWTG0vH.jpg", 
+            "release_date": "2016-11-10", 
+            "title": "The Monster", 
+            "video": false, 
+            "vote_average": 0, 
+            "vote_count": 1
+        }
+    ], 
+    "total_pages": 49, 
+    "total_results": 968
+}
