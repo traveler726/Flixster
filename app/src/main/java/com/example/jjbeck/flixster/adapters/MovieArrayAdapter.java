@@ -22,6 +22,14 @@ import java.util.ArrayList;
  */
 
 public class MovieArrayAdapter extends ArrayAdapter<Movie> {
+    // View lookup cache
+
+    private static class ViewHolder {
+        TextView tvTitle;
+        TextView tvOverview;
+        ImageView ivImage;
+    }
+
     public MovieArrayAdapter(Context context, ArrayList<Movie> movies) {
         super(context, android.R.layout.simple_list_item_1, movies);
     }
@@ -34,33 +42,66 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         // Get the data for the movie at 'position' (remember index)
         Movie movie = getItem(position);
 
+        // Check if an existing view is being reused, otherwise inflate the view
+        ViewHolder viewHolder; // view lookup cache stored in tag
+
         // check to see if existing view is getting reused.
         // http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView#row-view-recycling
         if (convertView == null) {
+            // If there's no view to re-use, inflate a brand new view for row
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.item_movie, parent, false);
+
+            // then cache the view holder onto the view for later use!
+            viewHolder = new ViewHolder();
+            viewHolder.tvTitle    = (TextView)  convertView.findViewById(R.id.tvTitle);
+            viewHolder.tvOverview = (TextView)  convertView.findViewById(R.id.tvOverview);
+            viewHolder.ivImage    = (ImageView) convertView.findViewById(R.id.idMovieImage);
+            convertView.setTag(viewHolder);
 
             // Toast the name to display temporarily on screen
             // I like this for debugging.  Pretty neat.
             toastMsg = "getView("+position+") inflated new view.";
         } else {
+            // Re-using the view - so just get the view holder that it has cached.
+            viewHolder = (ViewHolder) convertView.getTag();
+
             toastMsg = "getView("+position+") recycling old view.";
         }
         Toast.makeText(getContext(), toastMsg, Toast.LENGTH_SHORT).show();
 
-        // find the image view
-        ImageView lvImage = (ImageView) convertView.findViewById(R.id.idMovieImage);
+        // retrieve the image view from the view holder cached for the row.
+        // ImageView ivImage = (ImageView) convertView.findViewById(R.id.idMovieImage);
+        ImageView ivImage = viewHolder.ivImage;
+
+        // Setup the listener for when clicked.  Pass the listener the position to cache!
+        ivImage.setTag(position);
 
         // Clear out data from possible reused view (Why not above?)
-        lvImage.setImageResource(0);
+        ivImage.setImageResource(0);
 
-        // Setup the new data now.
-        // TODO: fix the naming of the overviewEditText to more standard like tvOverview!
-        TextView tvTitle    = (TextView) convertView.findViewById(R.id.tvTitle);
-        TextView tvOverview = (TextView) convertView.findViewById(R.id.tvOverview);
+        // Attach the click event handler
+        ivImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = (Integer) view.getTag();
 
-        tvTitle.setText(Html.fromHtml("<i>"+movie.getTitle()+"</i>"));
-        tvOverview.setText(movie.getOverview());
+                // Access the row position here to get the correct data item
+                Movie movie = getItem(position);
+
+                // What happens when movie clicked on... 
+                String id    = movie.getMovieId();
+                String title = movie.getTitle();
+
+                String toastMsg = String.format("Processing click for movie %s with id=%s at position=%d", title, id, position);
+                Toast.makeText(getContext(), toastMsg, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        // Just use the views cached in the holder for the row.
+        viewHolder.tvTitle.setText(Html.fromHtml("<i>"+movie.getTitle()+"</i>"));
+        viewHolder.tvOverview.setText(movie.getOverview());
 
         // Use the Picasso library to get the URL and load the
         // image into the Layouts ImageView.
@@ -70,7 +111,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
                 .centerCrop()
                 .placeholder(R.drawable.hour_glass_loading)
                 .error(R.drawable.oh_no)
-                .into(lvImage);
+                .into(ivImage);
 
         return convertView;
     }
