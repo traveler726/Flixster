@@ -4,7 +4,6 @@
 Improvements:
 ----------
 # Need to get click off of the image and into the entire row for the ListView.
-# Need to understand how the image sizing in design works better.
 
 Learning:
 ----------
