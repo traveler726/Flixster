@@ -1,6 +1,7 @@
 package com.example.jjbeck.flixster.adapters;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -98,17 +99,28 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
             }
         });
 
-
         // Just use the views cached in the holder for the row.
         viewHolder.tvTitle.setText(Html.fromHtml("<i>"+movie.getTitle()+"</i>"));
         viewHolder.tvOverview.setText(movie.getOverview());
 
+        String imagePath = null;
+        switch (getContext().getResources().getConfiguration().orientation) {
+            case Configuration.ORIENTATION_PORTRAIT:
+                imagePath = movie.getPosterPath();
+                break;
+            case Configuration.ORIENTATION_LANDSCAPE:
+                imagePath = movie.getBackdropPath();
+                break;
+            default:
+                break;
+        }
+
         // Use the Picasso library to get the URL and load the
         // image into the Layouts ImageView.
         Picasso.with(getContext())
-                .load(movie.getPosterPath())
+                .load(imagePath)
                 .fit()
-                .centerCrop()
+                .centerInside()
                 .placeholder(R.drawable.hour_glass_loading)
                 .error(R.drawable.oh_no)
                 .into(ivImage);
