@@ -56,11 +56,14 @@ public class MovieActivity extends AppCompatActivity {
     // Let's call the downstream service to get the movies.
     // ----------------------------------------------------
     private void getNSetupMovies() {
+
+        // Setup the Http Client and get the data from the DB.
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(nowPlayingUrl, new JsonHttpResponseHandler(){
+
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                // Got them - let's setup them up now.
+                // Got the movie data - let's setup them up now.
                 setupMoviesFromDB(response);
             }
 
@@ -76,9 +79,11 @@ public class MovieActivity extends AppCompatActivity {
     // Now that I have the movies let's setup and update the app.
     // ----------------------------------------------------
     private void setupMoviesFromDB(JSONObject response) {
-        JSONArray movieJsonResults = null;
+        // Make sure to clear out any old data
+        // Overkill for 1st request - but not too much!
+        movieAdapter.clear();
         try {
-            movieJsonResults = response.getJSONArray("results");
+            JSONArray movieJsonResults = response.getJSONArray("results");
             movies.addAll(Movie.createMovieListfromJsonArray(movieJsonResults));
             movieAdapter.notifyDataSetChanged();
 
@@ -92,7 +97,6 @@ public class MovieActivity extends AppCompatActivity {
         // In this case it was already done in onCreate(...) above
         // setContentView(R.layout.activity_movie);
 
-
         // Lookup the swipe container view
         swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
 
@@ -101,7 +105,7 @@ public class MovieActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
 
-                Toast.makeText(MovieActivity.this, "Swipe requested to refresh the data.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MovieActivity.this, "Refreshing Data ...", Toast.LENGTH_SHORT).show();
 
                 // Your code to refresh the list here.
                 getNSetupMovies();
@@ -111,7 +115,7 @@ public class MovieActivity extends AppCompatActivity {
                 // Now we call setRefreshing(false) to signal refresh has finished
                 swipeContainer.setRefreshing(false);
 
-                Toast.makeText(MovieActivity.this, "Swipe data refresh finished.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MovieActivity.this, "... data all up to date now!", Toast.LENGTH_SHORT).show();
             }
         });
 

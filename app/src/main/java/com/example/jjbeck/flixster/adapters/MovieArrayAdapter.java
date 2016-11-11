@@ -64,7 +64,13 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
 
         // Use the Picasso library to get the URL and load the
         // image into the Layouts ImageView.
-        Picasso.with(getContext()).load(movie.getPosterPath()).into(lvImage);
+        Picasso.with(getContext())
+                .load(movie.getPosterPath())
+                .fit()
+                .centerCrop()
+                .placeholder(R.drawable.hour_glass_loading)
+                .error(R.drawable.oh_no)
+                .into(lvImage);
 
         return convertView;
     }
