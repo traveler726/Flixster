@@ -18,6 +18,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
+
 /**
  * Created by jjbeck on 11/8/16.
  */
@@ -69,7 +71,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
 
             toastMsg = "getView("+position+") recycling old view.";
         }
-        Toast.makeText(getContext(), toastMsg, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(), toastMsg, Toast.LENGTH_SHORT).show();
 
         // retrieve the image view from the view holder cached for the row.
         // ImageView ivImage = (ImageView) convertView.findViewById(R.id.idMovieImage);
@@ -119,6 +121,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         // image into the Layouts ImageView.
         Picasso.with(getContext())
                 .load(imagePath)
+                .transform(new RoundedCornersTransformation(10, 10))
                 .fit()
                 .centerInside()
                 .placeholder(R.drawable.hour_glass_loading)

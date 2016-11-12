@@ -17,8 +17,8 @@ Completed user stories:
  
 Optional enhancements: 
 
- * [ ] Use Styles and Themes to keep your layout files clean of view styles. (1 point)
- * [ ] Improve the user interface through styling and coloring (1 to 5 points depending on the difficulty of UI improvements)
+ * [x] Use Styles and Themes to keep your layout files clean of view styles. (1 point)
+ * [x] Improve the user interface through styling and coloring (1 to 5 points depending on the difficulty of UI improvements)
  * [ ] For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous ListViews and use different ViewHolder layout files for popular movies and less popular ones. (2 points)
  * [ ] Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity. (3 points)
  * [ ] Stretch: Allow video posts to be played in full-screen using the YouTubePlayerView (2 points)
@@ -29,7 +29,7 @@ Optional enhancements:
  * [ ] Stretch: Leverage the data binding support module to bind data into one or more activity layout templates.
  * [ ] Stretch: Switch to using retrolambda expressions to cleanup event handling blocks. (1 point)
  * [ ] Stretch: Apply the popular ButterKnife annotation library to reduce view boilerplate. (1 point)
- * [ ] Stretch: Add a rounded corners for the images using the Picasso transformations. (1 point)
+ * [x] Stretch: Add a rounded corners for the images using the Picasso transformations. (1 point)
  * [ ] Stretch: Replace android-async-http network client with the popular OkHttp networking library for all TheMovieDB API calls. (1 points)
  * [ ] Stretch: Replace all icon drawables and other static image assets with vector drawables where appropriate. (1 points)
 
