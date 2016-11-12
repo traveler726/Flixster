@@ -17,7 +17,7 @@ Completed user stories:
  
 Optional enhancements: 
 
- * [ ] Use Styles and Themes to keep your layout files clean of view styles. (1 point)
+ * [x] Use Styles and Themes to keep your layout files clean of view styles. (1 point)
  * [ ] Improve the user interface through styling and coloring (1 to 5 points depending on the difficulty of UI improvements)
  * [ ] For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous ListViews and use different ViewHolder layout files for popular movies and less popular ones. (2 points)
  * [ ] Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity. (3 points)
