@@ -3,6 +3,8 @@ package com.example.jjbeck.flixster;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBar;
+
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -35,6 +37,8 @@ public class MovieActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setupActionBar();
+
         // Only ever call `setContentView` once right at the top
         setContentView(R.layout.activity_movie);
         getSupportActionBar().show();  // can show() or hide();
@@ -51,6 +55,10 @@ public class MovieActivity extends AppCompatActivity {
         setupSwipe();
     }
 
+    private void setupActionBar() {
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM | ActionBar.DISPLAY_SHOW_HOME);
+        getSupportActionBar().setCustomView(R.layout.actionbar_title);
+    }
 
     // ----------------------------------------------------
     // Let's call the downstream service to get the movies.

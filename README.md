@@ -36,8 +36,13 @@ Optional enhancements:
 Notes:
   * [Full assignment spec](http://courses.codepath.com/courses/android_fast_track/unit/1#!assignment)
 
-Walkthrough of all user stories:
+ToDo:
+  * [My Notes:](ToDo.md)
 
+Walkthrough of all user stories:
+![Video Walkthrough](all_user_stories.gif)
+
+Walkthrough of required user stories:
 ![Video Walkthrough](required_user_stories.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
