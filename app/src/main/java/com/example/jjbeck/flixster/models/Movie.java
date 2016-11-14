@@ -4,6 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -37,8 +38,9 @@ import java.util.ArrayList;
  *
  */
 
-public class Movie {
+public class Movie implements Serializable {
 
+    private static final long serialVersionUID    = 1234567890L;
     private static String EMPTY_OVERVIEW          = "N/A";
     private static String IMAGE_URL               = "https://image.tmdb.org/t/p/";
     private static String IMAGE_POSTER_SIZE       = "w342";
@@ -50,6 +52,7 @@ public class Movie {
     private String originalTitle;
     private String title;
     private String overview;
+    private String releaseDate;
     private String movieId;
     private double popularity;
     private double stars;
@@ -61,6 +64,7 @@ public class Movie {
         title         = jsonObject.getString("title");
         originalTitle = jsonObject.getString("original_title");
         overview      = jsonObject.getString("overview");
+        releaseDate   = jsonObject.getString("release_date");
         movieId       = jsonObject.getString("id");
         popularity    = Double.valueOf(jsonObject.getString("popularity"));
         stars         = jsonObject.getDouble("vote_average");
@@ -84,6 +88,8 @@ public class Movie {
     }
 
     public String getTitle() { return title; }
+
+    public String getReleaseDate() { return releaseDate; }
 
     public String getMovieId() { return movieId; }
 

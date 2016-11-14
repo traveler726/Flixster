@@ -1,10 +1,12 @@
 package com.example.jjbeck.flixster;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
-
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -21,8 +23,11 @@ import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
 
+import static com.example.jjbeck.flixster.R.id.lvMovies;
+
 public class MovieActivity extends AppCompatActivity {
 
+    public  static String MOVIE_DETAIL_KEY = "movie_detail";
     private static String nowPlayingUrl = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
 
     ArrayList<Movie> movies;
@@ -41,9 +46,10 @@ public class MovieActivity extends AppCompatActivity {
 
         // Only ever call `setContentView` once right at the top
         setContentView(R.layout.activity_movie);
-        getSupportActionBar().show();  // can show() or hide();
 
-        lvItems = (ListView) findViewById(R.id.lvMovies);
+        setupActionBar();
+
+        lvItems = (ListView) findViewById(lvMovies);
         movies = new ArrayList<>();
         movieAdapter = new MovieArrayAdapter(this, movies);
         lvItems.setAdapter(movieAdapter);
@@ -53,11 +59,31 @@ public class MovieActivity extends AppCompatActivity {
 
         // Setup the swipe for the main view
         setupSwipe();
+
+        // Setup handling the click on the movie
+        setupMovieSelectedListener();
     }
 
     private void setupActionBar() {
+
+        // Original
+        getSupportActionBar().show();  // can show() or hide();
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM | ActionBar.DISPLAY_SHOW_HOME);
         getSupportActionBar().setCustomView(R.layout.actionbar_title);
+
+        // NOTE: Do one of the other!
+
+//        // Manually Setup the action bar
+//        getSupportActionBar().show();  // can show() or hide();
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setLogo(R.mipmap.movie_reels_n_popcorn);
+//        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+//        // Setup action bar with layout resource.
+//        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM | ActionBar.DISPLAY_SHOW_HOME);
+//        getSupportActionBar().setLogo(R.mipmap.movie_reels_n_popcorn);
+//        getSupportActionBar().setDisplayUseLogoEnabled(true);
+//        getSupportActionBar().setCustomView(R.layout.actionbar_title);
     }
 
     // ----------------------------------------------------
@@ -135,4 +161,15 @@ public class MovieActivity extends AppCompatActivity {
                 android.R.color.holo_red_light);
     }
 
+    public void setupMovieSelectedListener() {
+        lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View item, int position, long rowId) {
+                // Launch the detail view passing movie as an extra
+                Intent clickIntent = new Intent(MovieActivity.this, MovieDetailActivity.class);
+                clickIntent.putExtra(MOVIE_DETAIL_KEY, movieAdapter.getItem(position));
+                startActivity(clickIntent);
+            }
+        });
+    }
 }

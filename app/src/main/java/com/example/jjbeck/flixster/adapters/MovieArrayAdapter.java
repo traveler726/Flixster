@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.jjbeck.flixster.R;
 import com.example.jjbeck.flixster.models.Movie;
@@ -82,24 +81,24 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
 
         // Clear out data from possible reused view (Why not above?)
         ivImage.setImageResource(0);
-
-        // Attach the click event handler
-        ivImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int position = (Integer) view.getTag();
-
-                // Access the row position here to get the correct data item
-                Movie movie = getItem(position);
-
-                // What happens when movie clicked on... 
-                String id    = movie.getMovieId();
-                String title = movie.getTitle();
-
-                String toastMsg = String.format("Processing click for movie %s with id=%s at position=%d", title, id, position);
-                Toast.makeText(getContext(), toastMsg, Toast.LENGTH_SHORT).show();
-            }
-        });
+//
+//        // Attach the click event handler
+//        ivImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                int position = (Integer) view.getTag();
+//
+//                // Access the row position here to get the correct data item
+//                Movie movie = getItem(position);
+//
+//                // What happens when movie clicked on...
+//                String id    = movie.getMovieId();
+//                String title = movie.getTitle();
+//
+//                String toastMsg = String.format("Processing click for movie %s with id=%s at position=%d", title, id, position);
+//                Toast.makeText(getContext(), toastMsg, Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         // Just use the views cached in the holder for the row.
         viewHolder.tvTitle.setText(Html.fromHtml("<i>"+movie.getTitle()+"</i>"));
@@ -122,9 +121,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         Picasso.with(getContext())
                 .load(imagePath)
                 .transform(new RoundedCornersTransformation(10, 10))
-                .fit()
-                .centerInside()
-                .placeholder(R.drawable.hour_glass_loading)
+                .placeholder(R.drawable.poster_placeholder_large)
                 .error(R.drawable.oh_no)
                 .into(ivImage);
 
